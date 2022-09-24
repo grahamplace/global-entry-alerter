@@ -1,0 +1,4 @@
+secrets.*
+.idea/
+.DS_Store
+venv/
