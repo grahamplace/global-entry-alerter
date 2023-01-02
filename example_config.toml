@@ -1,0 +1,12 @@
+[fetching]
+lookahead_weeks = 4
+wait_seconds = 3
+locations = [ # See https://github.com/oliversong/goes-notifier#goes-center-codes
+     { name = "SFO", code = 5446 },
+     { name = "LAX", code = 5180 },
+]
+
+[sending]
+to_numbers = [
+    "+11234567890",
+]
