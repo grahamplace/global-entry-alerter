@@ -1,6 +1,8 @@
 # Global Entry Alerter
 A bot that helps you find an open Global Entry interview appointment.
 
+[![PyPI version](https://badge.fury.io/py/global-entry-alerter.svg)](https://badge.fury.io/py/global-entry-alerter)
+
 ## Problem
 Booking an appointment for a [Global Entry](https://www.cbp.gov/travel/trusted-traveler-programs/global-entry) interview is hard, especially in cities with high demand like SF or NYC. 
 
