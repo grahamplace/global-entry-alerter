@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "global-entry-alerter"
-version = "0.2.2"
+version = "0.2.3"
 description = "A bot that helps you find an open Global Entry interview appointment"
 authors = ["Graham Place"]
 readme = "README.md"
