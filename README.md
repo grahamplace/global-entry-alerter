@@ -38,7 +38,17 @@ To run the project:
 
 
 ## One-Click Deploys to Render
-TODO
+You can easily run this project on [Render](https://render.com).
+
+1. Create a new [Environment Group](https://render.com/docs/configure-environment-variables#2-environment-groups) called `global-entry-alerter`. Set:
+   - `TWILIO_AUTH_TOKEN`
+   - `TWILIO_ACCOUNT_SID`
+   - `TWILIO_PHONE_NUMBER`
+   - `PYTHON_VERSION` (set to `3.11.0`)
+2. Use the "Deploy to Render" button below to deploy the project as a Blueprint
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/grahamplace/global-entry-alerter)
+
 
 ## Configuration
 The project uses `config.toml` for all configuration.
