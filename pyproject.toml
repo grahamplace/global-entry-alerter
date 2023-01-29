@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "global-entry-alerter"
-version = "0.1.0"
-description = ""
+version = "0.2.0"
+description = "A bot that helps you find an open Global Entry interview appointment"
 authors = ["Graham Place"]
 readme = "README.md"
 packages = [{include = "global_entry_alerter"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-requests = "^2.28.2"
-twilio = "^7.16.2"
+python = ">=3.8.1,<4"
 flake8 = "^6.0.0"
 black = "^22.12.0"
 pre-commit = "^3.0.1"
+requests = "^2.28.2"
+twilio = "^7.16.2"
 
 
 [build-system]

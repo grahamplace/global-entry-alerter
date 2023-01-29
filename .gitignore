@@ -4,3 +4,4 @@ poetry.lock
 venv/
 config.toml
 __pycache__
+dist/
