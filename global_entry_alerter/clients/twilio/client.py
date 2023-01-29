@@ -3,6 +3,10 @@ import logging
 from twilio.rest import Client
 from typing import List
 
+logger = logging.getLogger(__name__)
+twilio_logger = logging.getLogger("twilio")
+twilio_logger.setLevel(logging.WARNING)
+
 
 class TwilioException(Exception):
     pass
@@ -31,6 +35,7 @@ class TwilioClient:
         if not to_number or to_number is None:
             raise TwilioException("Message to_number cannot be empty")
 
+        logger.info(f"Sending sms to {to_number}:  {body}")
         self.client.messages.create(body=body, from_=self.from_number, to=to_number)
 
     def send_messages(self, messages: List[str], to_numbers: List[str]):
@@ -39,11 +44,10 @@ class TwilioClient:
 
         # 1600-character limit on SMS, so break full list into smaller lists
         chunks = list(chunkify(messages, 10))
-        logging.info(f"Sending {len(messages)} messages as {len(chunks)} texts")
+        logger.info(f"Sending {len(messages)} messages as {len(chunks)} texts")
 
         for c in chunks:
             body = "\n\n".join([str(t) for t in c])
-            logging.info(f"Sending sms:\n{body}")
             for number in to_numbers:
                 self.send_sms(body, number)
 
