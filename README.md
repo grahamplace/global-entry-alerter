@@ -1,13 +1,16 @@
 # Global Entry Alerter
 
 ## Problem
-Getting an appointment for a [Global Entry](https://www.cbp.gov/travel/trusted-traveler-programs/global-entry) interview is hard, especially in cities with high demand like SF or NYC. 
+Booking an appointment for a [Global Entry](https://www.cbp.gov/travel/trusted-traveler-programs/global-entry) interview is hard, especially in cities with high demand like SF or NYC. 
 
 If you check for open appointments, there is typically nothing available for weeks, sometimes even months. 
 However, appointments _are_ actually constantly opening up, they just get booked very quickly.
 
 This project polls the DHS Scheduler API for open Global Entry appointments, notifying you whenever a new one opens up.
 If the new appointment is convenient for you, book it immediately — otherwise it will be gone within a few minutes.
+
+This project is not affiliated with U.S. Customs and Border Protection or the U.S. Department of Homeland Security.
+
 
 ### Example Usage
 <img src="example.png" alt="drawing" width="30%"/>
@@ -47,7 +50,7 @@ See `example_config.toml` as a reference for your `config.toml`
 | `fetching.lookahead_weeks` | How many weeks from today to check for open appointments. E.g. if you want an appointment in the next month, use 4 weeks                                                                                                                                              |                                 4 |
 | `fetching.wait_seconds`    | The interval between checks for open appointments. It is best to use a value <= 60                                                                                                                                                                                    |                                10 |
 | `fetching.locations`       | Which Global Entry interview locations to check. Accepts many locations for use cases where multiple locations are feasible (e.g. EWR or JFK if you live in NYC). See [here](https://github.com/oliversong/goes-notifier#goes-center-codes) for the full set of codes | `[{ name = "JFK", code = 5140 }]` |
-| `sending.to_numbers`       | The phone numbers to send alerts to. Include +1 (or whatever country code)                                                                                                                                                                                            |                  ["+15207809135"] |
+| `sending.to_numbers`       | The phone numbers to send alerts to. Include +1 (or whatever country code)                                                                                                                                                                                            |                  `["+15207809135"]` |
 
 
 ## Development
