@@ -14,7 +14,8 @@ This project is not affiliated with U.S. Customs and Border Protection or the U.
 
 
 ### Example Usage
-<img src="example.png" alt="drawing" width="30%"/>
+<img src="https://github.com/grahamplace/global-entry-alerter/blob/main/example.png?raw=true" alt="drawing" width="30%"/>
+
 
 ## Requirements
 1. A Twilio account with the ability to send programmable SMS. See [here](https://www.twilio.com/docs/sms/quickstart/python).
