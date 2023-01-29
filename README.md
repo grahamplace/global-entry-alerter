@@ -21,6 +21,10 @@ This project is not affiliated with U.S. Customs and Border Protection or the U.
 2. Python 3 & [Poetry](https://python-poetry.org/docs/)
 
 ## Usage
+Set up your own `config.toml`, and leave the `global-entry-alerter` running for as long as needed.
+
+Once the script sends an alert about a particular appointment, it will keep that appointment in memory and won't notify you of it again. If you restart the script, it may re-send previously-seen appointments.
+
 ### Installation
 ```bash 
 $ git clone https://github.com/grahamplace/global-entry-alerter.git
