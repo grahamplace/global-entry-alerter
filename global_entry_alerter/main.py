@@ -4,7 +4,7 @@ import sys
 import time
 from global_entry_alerter.clients.twilio import TwilioClient
 from global_entry_alerter.clients.scheduler import SchedulerClient, Location
-import tomllib
+import toml
 
 logging.basicConfig(
     format="%(asctime)s %(name)-8s %(levelname)-8s %(message)s",
@@ -19,13 +19,12 @@ def _run(test_mode: bool = False):
     if test_mode:
         logger.warning("Running in test mode. Alerts will not be sent.")
 
-    with open("config.toml", mode="rb") as fp:
-        config = tomllib.load(fp)
-        locations = [
-            Location(name=loc["name"], code=loc["code"])
-            for loc in config["fetching"]["locations"]
-        ]
-        logger.info(f"Running with config: {config}")
+    config = toml.load("config.toml")
+    locations = [
+        Location(name=loc["name"], code=loc["code"])
+        for loc in config["fetching"]["locations"]
+    ]
+    logger.info(f"Running with config: {config}")
 
     twilio_client = TwilioClient()
     scheduler_client = SchedulerClient(config["fetching"]["lookahead_weeks"], locations)
