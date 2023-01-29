@@ -49,7 +49,7 @@ See `example_config.toml` as a reference for your `config.toml`
 | `fetching.lookahead_weeks` | How many weeks from today to check for open appointments. E.g. if you want an appointment in the next month, use 4 weeks                                                                                                                                              |                                 4 |
 | `fetching.wait_seconds`    | The interval between checks for open appointments. It is best to use a value <= 60                                                                                                                                                                                    |                                10 |
 | `fetching.locations`       | Which Global Entry interview locations to check. Accepts many locations for use cases where multiple locations are feasible (e.g. EWR or JFK if you live in NYC). See [here](https://github.com/oliversong/goes-notifier#goes-center-codes) for the full set of codes | `[{ name = "JFK", code = 5140 }]` |
-| `sending.to_numbers`       | The phone numbers to send alerts to. Include +1 (or whatever country code)                                                                                                                                                                                            |                  `["+15207809135"]` |
+| `sending.to_numbers`       | The phone numbers to send alerts to. Include +1 (or whatever country code)                                                                                                                                                                                            |                  `["+11231231234"]` |
 
 
 ## Development
