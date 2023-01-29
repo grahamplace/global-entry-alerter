@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def main(test_mode: bool = False):
+def _run(test_mode: bool = False):
     if test_mode:
         logger.warning("Running in test mode. Alerts will not be sent.")
 
@@ -44,8 +44,12 @@ def main(test_mode: bool = False):
         time.sleep(config["fetching"]["wait_seconds"])
 
 
-if __name__ == "__main__":
+def run():
     parser = argparse.ArgumentParser()
     parser.add_argument("--test", "-t", action="store_true", default=False)
     args = parser.parse_args()
-    main(args.test)
+    _run(args.test)
+
+
+if __name__ == "__main__":
+    run()
