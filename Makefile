@@ -8,5 +8,5 @@ black:
 flake8:
 	poetry run flake8 .
 
-publish
-    poetry publish --build
+publish:
+	poetry publish --build
