@@ -14,40 +14,37 @@ This project is not affiliated with U.S. Customs and Border Protection or the U.
 
 
 ### Example Usage
-<img src="https://github.com/grahamplace/global-entry-alerter/blob/main/example.png?raw=true" alt="drawing" width="30%"/>
-
+<img src="https://github.com/grahamplace/global-entry-alerter/blob/main/example.png?raw=true" alt="example of messages sent by bot" width="30%"/>
 
 ## Requirements
 1. A Twilio account with the ability to send programmable SMS. See [here](https://www.twilio.com/docs/sms/quickstart/python).
 2. Python 3 & [Poetry](https://python-poetry.org/docs/)
 
 ## Usage
-Set up your own `config.toml`, and leave the `global-entry-alerter` running for as long as needed.
+Configure your settings in a `config.toml`, set env vars, and leave the `global-entry-alerter` running for as long as needed.
 
 Once the script sends an alert about a particular appointment, it will keep that appointment in memory and won't notify you of it again. If you restart the script, it may re-send previously-seen appointments.
 
 ### Installation
-```bash 
-$ git clone https://github.com/grahamplace/global-entry-alerter.git
-$ cd global-entry-alerter
-$ poetry install
+```bash
+$ pip install global-entry-alerter
 ```
 
 ### Running
 To run the project:
-1. Copy `example_config.toml`, rename to `config.toml`
-2. Configure `config.toml` as needed (see Configuration below)
+1. Create your own `config.toml` (see [example_config.toml](https://github.com/grahamplace/global-entry-alerter/blob/main/example_config.toml))
+2. Configure your settings (see Configuration below)
 3. Set the following env variables using your Twilio account:
    - `TWILIO_AUTH_TOKEN`
    - `TWILIO_ACCOUNT_SID`
    - `TWILIO_PHONE_NUMBER`
-4. `poetry run global-entry-alerter`
+4. `global-entry-alerter --config ~/path_to_your/config.toml`
 
 
 ### Configuration
-The project uses `config.toml` for all configuration.
+The project uses a `.toml` configuration file for all settings.
 
-See `example_config.toml` as a reference for your `config.toml`
+See [example_config.toml](https://github.com/grahamplace/global-entry-alerter/blob/main/example_config.toml) as a reference for your own `config.toml`
 
 | Setting                  | Description                                                                                                                                                                                                                                                           |                     Example Value |
 |:-------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------:|
