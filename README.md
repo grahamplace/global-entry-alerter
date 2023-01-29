@@ -20,7 +20,7 @@ This project is not affiliated with U.S. Customs and Border Protection or the U.
 
 ## Requirements
 1. A Twilio account with the ability to send programmable SMS. See [here](https://www.twilio.com/docs/sms/quickstart/python).
-2. Python 3 & [Poetry](https://python-poetry.org/docs/)
+2. Python 3.8 or higher
 
 ## Usage
 Configure your settings in a `config.toml`, set env vars, and leave the `global-entry-alerter` running for as long as needed.
