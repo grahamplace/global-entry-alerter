@@ -17,16 +17,17 @@ This project is not affiliated with U.S. Customs and Border Protection or the U.
 
 ## Requirements
 1. A Twilio account with the ability to send programmable SMS. See [here](https://www.twilio.com/docs/sms/quickstart/python).
-2. Python 3 & [Poetry](https://python-poetry.org/docs/) installed (if running manually on your own computer), OR a [Render](https://render.com) account (if using one-click deploys, see below)
+2. Python 3 & [Poetry](https://python-poetry.org/docs/)
 
-## Running Locally
-To install the project:
+## Usage
+### Installation
 ```bash 
 $ git clone https://github.com/grahamplace/global-entry-alerter.git
 $ cd global-entry-alerter
 $ poetry install
 ```
 
+### Running
 To run the project:
 1. Copy `example_config.toml`, rename to `config.toml`
 2. Configure `config.toml` as needed (see Configuration below)
@@ -37,20 +38,7 @@ To run the project:
 4. `poetry run global-entry-alerter`
 
 
-## One-Click Deploys to Render
-You can easily run this project on [Render](https://render.com).
-
-1. Create a new [Environment Group](https://render.com/docs/configure-environment-variables#2-environment-groups) called `global-entry-alerter`. Set:
-   - `TWILIO_AUTH_TOKEN`
-   - `TWILIO_ACCOUNT_SID`
-   - `TWILIO_PHONE_NUMBER`
-   - `PYTHON_VERSION` (set to `3.11.0`)
-2. Use the "Deploy to Render" button below to deploy the project as a Blueprint
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/grahamplace/global-entry-alerter)
-
-
-## Configuration
+### Configuration
 The project uses `config.toml` for all configuration.
 
 See `example_config.toml` as a reference for your `config.toml`
